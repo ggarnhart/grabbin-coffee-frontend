@@ -1,26 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter, Route } from "react-router-dom";
+import "./App.css";
+import Landing from "./components/Landing";
+import Attend from "./components/Attend";
+import { connect } from "react-redux";
+import * as actions from "./actions";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <Route exact path="/" component={Landing} />
+        <Route exact path="/attend/:num/:id" component={Attend} />
+      </BrowserRouter>
     </div>
   );
 }
 
-export default App;
+export default connect(null, actions)(App);

@@ -1,5 +1,14 @@
 .App {
-  text-align: center;
+  text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 .App-logo {
@@ -35,4 +44,28 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  width: 70vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.walking-img {
+  max-width: 80vw;
+  max-height: 30vh;
+  /* margin-left: auto; */
+  margin-right: auto;
+  margin-top: 20px;
+}
+
+.no-margin-bottom {
+  margin-bottom: 0;
+}
+
+.small-margin-top {
+  margin-top: 10px;
 }
