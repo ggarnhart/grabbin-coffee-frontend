@@ -3,11 +3,11 @@ import { attend } from "../actions/index";
 import { connect } from "react-redux";
 class Attend extends Component {
   async componentDidMount() {
-    const info = {
+    const values = {
       id: this.props.match.params.id,
       listing: this.props.match.params.num
     };
-    await this.props.attend(info);
+    await this.props.attend(values);
   }
   state = {
     date: "August 12, 2020",
