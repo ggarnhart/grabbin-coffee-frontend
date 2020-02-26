@@ -7,7 +7,7 @@ class Attend extends Component {
       id: this.props.match.params.id,
       listing: this.props.match.params.num
     };
-    await this.props.attend(`${this.props.match.params.id}`);
+    await this.props.attend(info);
   }
   state = {
     date: "August 12, 2020",
